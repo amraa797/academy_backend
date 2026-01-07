@@ -7,6 +7,7 @@ import {
 } from "./movies/graphgl/schema.ts";
 import { movieQueries, userQueries } from "./movies/graphgl/queries.ts";
 import { movieMutations } from "./movies/graphgl/mutation.ts";
+import { userMutations } from "./movies/graphgl/mutation.ts";
 
 export const typeDefs = `
   ${movieTypesDefs}
@@ -28,5 +29,6 @@ export const resolvers = {
   Query: { ...movieQueries, ...userQueries },
   Mutation: {
     ...movieMutations,
+    ...userMutations,
   },
 };

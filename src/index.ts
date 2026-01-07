@@ -5,7 +5,7 @@ import { typeDefs, resolvers } from "./apolloServes.ts";
 
 mongoose
   .connect(
-    "mongodb+srv://enkhtuvshinej_db_user:7aLod5Z9aBfk23pu@backend-lesson.pfxqeun.mongodb.net/sample_mflix?appName=backend-lesson"
+    "mongodb+srv://amraabnaho_db_user:pzNVbSYCyRNtIQwF@amra97.1i0hoee.mongodb.net/sample_mflix"
   )
   .then(() => {
     console.log("MongoDB connected");

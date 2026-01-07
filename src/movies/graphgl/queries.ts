@@ -2,11 +2,15 @@ import { Movies, Users } from "../db/models.ts";
 import { type IContext } from "../../index.ts";
 
 export const movieQueries = {
-  movies: async (
+  moviesAdd: async (
     _root: any,
     { title, page }: { title: string; page: number },
     { user }: IContext
   ) => {
+    if (!user) {
+      throw new Error("Unauthorized");
+    }
+    console.log("user", user);
     const perPage = 20;
     const skip = (page - 1) * perPage;
 

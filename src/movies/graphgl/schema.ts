@@ -27,6 +27,9 @@ export const movieQueryTypeDefs = `
 
 export const movieMutationTypeDefs = `
  addMovie(input: MovieInput): String
+  sighUp(user: String, email: String, password: String): String
+  login(email: String, password: String): String
+ 
 `;
 
 export const userTypesDefs = `
